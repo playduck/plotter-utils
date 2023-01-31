@@ -1,0 +1,39 @@
+[command.write]
+default_hpgl_device = "dxy1150"
+
+[device.dxy1150]
+name = "Roland DXY-1150A"
+plotter_unit_length = "0.025mm"
+pen_count = 8
+info = "Configuration from https://github.com/abey79/vpype/pull/81"
+
+[[device.dxy1150.paper]]
+name = "a4"
+info = "The plotter must be configured in ISO A3 mode (all dip switches off), place a4 paper bottom left (0,0) of the flatbed with the longest side along X."
+paper_size = ["297mm", "210mm"]
+x_range = [0, 16158]
+y_range = [0, 11040]
+y_axis_up = true
+origin_location = ["0mm", "210mm"]
+final_pu_params = "16158,11040"
+set_ps = 3
+
+[[device.dxy1150.paper]]
+name = "a3"
+info = "The plotter must be configured in ISO A3 mode (all dip switches off), place a3 paper bottom left (0,0) of the flatbed with the longest side along X."
+paper_size = ["420mm", "297mm"]
+x_range = [0, 16158]
+y_range = [0, 11040]
+y_axis_up = true
+origin_location = ["0mm", "297mm"]
+final_pu_params = "16158,11040"
+set_ps = 3
+
+[[device.dxy1150.paper]]
+name = "flexl"
+y_axis_up = true
+paper_orientation = "landscape"
+origin_location = ["15mm", "15mm"]
+origin_location_reference = "botleft"
+rotate_180 = true
+final_pu_params = "0,0"
